@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
-
+import {Container, WelcomeText, InputContainer, ButtonContainer, ForgotPassword} from "./styles/styles";
+import Button from "./components/Button";
+import Input from "./components/Input";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <WelcomeText>Bemvindo</WelcomeText>
+      <InputContainer>
+        <Input type="text" placeholder="Email" />
+        <Input type="password" placeholder="Password" />
+      </InputContainer>
+      <ButtonContainer>
+        <Button content="Entrar" />
+      </ButtonContainer>
+      <ForgotPassword>Esqueceu a senha?</ForgotPassword>
+    </Container>
   );
 }
 
